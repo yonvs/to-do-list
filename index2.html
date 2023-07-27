@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To do list</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <section>
+        <H1> To-do-list</H1>
+        <input type="text" id="inputfield">
+        <button id="addtodo">
+            +
+        </button>
+        <div id="todocontainer">
+
+        </div>
+    </section>
+    <script>
+        var addtodolist = document.getElementById('addtodo');
+        var inputfield = document.getElementById('inputfield');
+        var todocontainer = document.getElementById('todocontainer');
+
+        addtodolist.onclick = function(){
+            if(inputfield.value != ""){
+                var paragraph = document.createElement('p');
+                var untodo = document.createElement('button');
+                var todocard = document.createElement('div');
+                untodo.innerHTML = "-";
+                paragraph.innerHTML = inputfield.value;
+                paragraph.classList.add("paragraph");
+                untodo.classList.add("untodo");
+                todocard.classList.add("todocard");
+                todocard.appendChild(paragraph);
+                todocard.appendChild(untodo);
+                todocontainer.appendChild(todocard);
+                inputfield.value = "";
+            }
+            else{
+                alert("Veuillez saisir une tâche s'il vous plaît.");
+            }
+            untodo.addEventListener('click', function() {
+                todocard.remove();
+            });
+        }
+        
+        
+    </script>
+  </body>
+</html>

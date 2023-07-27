@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    margin : 1rem  ;
+    color: green !important;
+}
+section{
+    padding : 10px 1rem;
+    background-color: white;
+    overflow: hidden;
+    padding: 2em;
+
+}
+#inputfield{
+    border: 2px solid green;
+}
+#addtodolist{
+    background-color: green;
+    color : white;
+    border: 2px solid green;
+}
+body{
+    display: flex;
+    align-items: center;
+    background-color: green;
+    justify-content: center;
+    min-height: 100vh;
+}
+#todocontainer{
+}
+.todocard{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    background: green;
+    color: white;
+    animation: anime 0.3s linear;
+    padding: 5px;
+    
+}
+.todocard:last-child{
+    margin: 10px 0 0;
+
+}
+.paragraphe_style{
+    width: 80%;
+    word-break: break-all;
+}
+.undotodo{
+    background-color: green;
+    border: 1px solid white;
+    color: white;
+    transition: 0.2s;
+}
+.undotodo:hover{
+    background-color: white;
+    border: 1px solid green;
+    color: green;
+    cursor: pointer;
+}
+@keyframes anime {
+    from{
+        transform: translateY(50px);
+    }
+}
